@@ -45,11 +45,11 @@ export class Backend {
         const daemon = {
             type: "remote",
             p2p_bind_ip: "0.0.0.0",
-            p2p_bind_port: 27777,
+            p2p_bind_port: 21111,
             rpc_bind_ip: "127.0.0.1",
-            rpc_bind_port: 28888,
+            rpc_bind_port: 22222,
             zmq_rpc_bind_ip: "127.0.0.1",
-            zmq_rpc_bind_port: 29999,
+            zmq_rpc_bind_port: 23333,
             out_peers: -1,
             in_peers: -1,
             limit_rate_up: -1,
@@ -61,7 +61,7 @@ export class Backend {
             mainnet: {
                 ...daemon,
                 remote_host: "remote.guus.website",
-                remote_port: 28888
+                remote_port: 22222
             },
             stagenet: {
                 ...daemon,
@@ -105,11 +105,11 @@ export class Backend {
         this.remotes = [
             {
                 host: "remote.guus.website",
-                port: "28888"
+                port: "22222"
             },
             {
                 host: "daemons.guus.website",
-                port: "28888"
+                port: "22222"
             },
             {
                 host: "node.guus-guus.website",
@@ -117,15 +117,15 @@ export class Backend {
             },
             {
                 host: "remote2.guus.website",
-                port: "28888"
+                port: "22222"
             },
             {
                 host: "nodes2.guus.website",
-                port: "28888"
+                port: "22222"
             },
             {
                 host: "rpc-2.guus.website",
-                port: "28888"
+                port: "22222"
             }
         ]
 
