@@ -23,7 +23,7 @@ export default {
         next: "SUIVANT",
         openWallet: "OUVRIR LE PORTEFEUILLE",
         receive: "RECEVOIR",
-        registerFrameNode: "ENREGISTRER UN NOEUD DE FRAME",
+        registerFramePix: "ENREGISTRER UN NOEUD DE FRAME",
         rescan: "RÉANALYSER",
         restoreWallet: "RESTAURER LE PORTEFEUILLE",
         save: "SAUVEGARDER",
@@ -32,7 +32,7 @@ export default {
         selectWalletFile: "SÉLECTIONNER LE FICHIER PORTEFEUILLE",
         send: "ENVOYER",
         sendCoins: "ENVOYER DES PIECES",
-        frameNode: "NOEUD DE FRAME",
+        framePix: "NOEUD DE FRAME",
         settings: "RÉGLAGES",
         showQRCode: "AFFICHER LE QR CODE",
         showTxDetails: "AFFICHER LES DETAILS DE TRANSACTION",
@@ -93,7 +93,7 @@ export default {
             title: "Mot de passe",
             message: "Entrez le mot de passe du portefeuille pour continuer."
         },
-        registerFrameNode: {
+        registerFramePix: {
             title: "Enregistrer le nœud de frame",
             message: "Voulez-vous enregistrer le nœud de frame ?",
             ok: "ENREGISTRER"
@@ -146,14 +146,14 @@ export default {
             title: "Confirmer le déverrouillage",
             ok: "DÉVERROUILLER"
         },
-        unlockFrameNode: {
+        unlockFramePix: {
             title: "Déverrouiller le nœud de frame",
             confirmTitle: "Confirmer le déverrouillage",
             message: "Voulez-vous déverrouiller le nœud de frame ?",
             ok: "DÉVERROUILLER"
         },
-        unlockFrameNodeWarning: {
-            title: "Unlock frame node warning",
+        unlockFramePixWarning: {
+            title: "Unlock frame warning",
             message: "Unlocking a partial stake in a node will also unstake for any other participants, if staking in a shared node its best to let the operator and other participants know you are unstaking.",
             ok: "CONTINUE"
         }
@@ -195,8 +195,8 @@ export default {
         restoreFromBlockHeight: "RESTAURATION DE LA HAUTEUR DU BLOC",
         restoreFromDate: "RESTAURATION A PARTIR DE LA DATE",
         seedLanguage: "LANGAGE SEED",
-        frameNodeCommand: "COMMANDE DE NŒUD DE FRAME",
-        frameNodeKey: "CLÉ DE FRAME NODE",
+        framePixCommand: "COMMANDE DE NŒUD DE FRAME",
+        framePixKey: "CLÉ DE FRAME",
         signature: "SIGNATURE",
         transactionId: "TRANSACTION ID",
         walletFile: "DOSSIER DU PORTEFEUILLE",
@@ -230,7 +230,7 @@ export default {
         copyQR: "Copier le QR code",
         copySeedWords: "Copier les mots clés",
         copySpendKey: "Copier la clé de dépense",
-        copyFrameNodeKey: "Copy frame node key",
+        copyFramePixKey: "Copy frame key",
         copyTransactionId: "Copier l'ID de transaction",
         copyViewKey: "Copier la clé de visibilité",
         createNewWallet: "Créer un nouveau portefeuille",
@@ -263,7 +263,7 @@ export default {
             },
             passwordUpdated: "Mot de passe mis à jour",
             qrCopied: "QR code copié dans le presse-papier",
-            registerFrameNodeSuccess: "Nœud de frame enregistré avec succès",
+            registerFramePixSuccess: "Nœud de frame enregistré avec succès",
             sendSuccess: "Transaction envoyée avec succès",
             signatureCopied: "Signature copied to clipboard",
             stakeSuccess: "Mise placée avec succès",
@@ -282,7 +282,7 @@ export default {
             enterTransactionProof: "Enter transaction proof",
             enterWalletName: "Entrez un nom de portefeuille",
             errorSavingItem: "Erreur de sauvegarde {item}",
-            failedFrameNodeUnlock: "Erreur de déverrouillage du nœud de frame",
+            failedFramePixUnlock: "Erreur de déverrouillage du nœud de frame",
             failedToSetLanguage: "Impossible de définir la langue : {lang}",
             failedWalletImport: "Echec d'import du portefeuille",
             failedWalletOpen: "Echec de l'ouverture du portefeuille : veuillez essayer de nouveau.",
@@ -297,8 +297,8 @@ export default {
             invalidRestoreDate: "Date de restauration non valide",
             invalidRestoreHeight: "Hauteur de restauration non valide",
             invalidSeedLength: "Longueur de mot clé non valide",
-            invalidFrameNodeCommand: "Veuillez entrer la commande d'inscription d'un nœud de frame",
-            invalidFrameNodeKey: "Clé du nœud de frame non valide",
+            invalidFramePixCommand: "Veuillez entrer la commande d'inscription d'un nœud de frame",
+            invalidFramePixKey: "Clé du nœud de frame non valide",
             invalidWalletPath: "Chemin du portefeuille non valide",
             keyImages: {
                 exporting: "Erreur de l'exportation des clés images",
@@ -414,7 +414,7 @@ export default {
         saveToAddressBook: "Enregistrez dans le carnet d'adresses",
         seedWords: "Mots clés",
         selectLanguage: "Sélectionnez une langue",
-        frameNodeRegistrationDescription: "Entrez la commande {registerCommand} produite par le démon qui est enregistrée pour devenir un noeud de frame en utilisant la commande \"{prepareCommand}\"",
+        framePixRegistrationDescription: "Entrez la commande {registerCommand} produite par le démon qui est enregistrée pour devenir un noeud de frame en utilisant la commande \"{prepareCommand}\"",
         spendKey: "Clé dépensée",
         startingDaemon: "Démarrage du démon",
         startingWallet: "Démarrage du portefeuille",
@@ -439,7 +439,7 @@ export default {
                 pendingIncoming: "Entrantes en attente",
                 pendingOutgoing: "Sortantes en attente",
                 miner: "Miner",
-                frameNode: "Noeud de frame",
+                framePix: "Noeud de frame",
                 governance: "Gouvernance",
                 stake: "Stake",
                 failed: "Echouées"
@@ -463,7 +463,7 @@ export default {
         currentlyStakedNodes: "Currently staked nodes",
         privateKeys: "Clés privées",
         rescanWallet: "Analysez de nouveau le portefeuille",
-        frameNode: {
+        framePix: {
             registration: "ENREGISTREMENT",
             staking: "STAKING"
         },

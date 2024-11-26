@@ -23,7 +23,7 @@ export default {
         next: "SIGUIENTE",
         openWallet: "ABRIR MONEDERO",
         receive: "RECIBIR",
-        registerFrameNode: "REGISTRAR NODO DE FRAME",
+        registerFramePix: "REGISTRAR NODO DE FRAME",
         rescan: "VOLVER A EXAMINAR",
         restoreWallet: "RESTAURAR MONEDERO",
         save: "GUARDAR",
@@ -32,7 +32,7 @@ export default {
         selectWalletFile: "SELECCIONAR ARCHIVO DEL MONEDERO",
         send: "ENVIAR",
         sendCoins: "ENVIAR MONEDAS",
-        frameNode: "NODO DE FRAME",
+        framePix: "NODO DE FRAME",
         settings: "CONFIGURACIÓN",
         showQRCode: "MOSTRAR CÓDIGO QR",
         showTxDetails: "MOSTRAR DETALLES DE LA TRANSACCIÓN",
@@ -93,7 +93,7 @@ export default {
             title: "Contraseña",
             message: "Introduzca la contraseña del monedero para continuar."
         },
-        registerFrameNode: {
+        registerFramePix: {
             title: "Registrar nodo de servicio",
             message: "¿Desea registrar el nodo de servicio?",
             ok: "REGISTRAR"
@@ -146,14 +146,14 @@ export default {
             title: "Confirmar liberación",
             ok: "LIBERAR"
         },
-        unlockFrameNode: {
+        unlockFramePix: {
             title: "Liberar nodo de servicio",
             confirmTitle: "Confirmar liberación",
             message: "¿Desea liberar el nodo de servicio?",
             ok: "LIBERAR"
         },
-        unlockFrameNodeWarning: {
-            title: "Unlock frame node warning",
+        unlockFramePixWarning: {
+            title: "Unlock frame warning",
             message: "Unlocking a partial stake in a node will also unstake for any other participants, if staking in a shared node its best to let the operator and other participants know you are unstaking.",
             ok: "CONTINUE"
         }
@@ -194,8 +194,8 @@ export default {
         restoreFromBlockHeight: "RESTAURAR DESDE EL BLOQUE NÚMERO",
         restoreFromDate: "RESTAURAR DESDE EL DÍA",
         seedLanguage: "IDIOMA SEMILLA",
-        frameNodeCommand: "ORDEN PARA REGISTRAR EL NODO DE FRAME",
-        frameNodeKey: "CLAVE NODO DE FRAME",
+        framePixCommand: "ORDEN PARA REGISTRAR EL NODO DE FRAME",
+        framePixKey: "CLAVE NODO DE FRAME",
         signature: "SIGNATURE",
         transactionId: "TRANSACTION ID",
         walletFile: "ARCHIVO MONEDERO",
@@ -229,7 +229,7 @@ export default {
         copyQR: "Copiar código QR",
         copySeedWords: "Copiar palabras semilla",
         copySpendKey: "Copiar clave de gasto",
-        copyFrameNodeKey: "Copy frame node key",
+        copyFramePixKey: "Copy frame key",
         copyTransactionId: "Copiar ID de la transacción",
         copyViewKey: "Copiar clave de visualización",
         createNewWallet: "Crear nuevo monedero",
@@ -262,7 +262,7 @@ export default {
             },
             passwordUpdated: "Contraseña actualizada",
             qrCopied: "Código QR copiado al portapapeles",
-            registerFrameNodeSuccess: "Nodo de servicio registrado correctamente",
+            registerFramePixSuccess: "Nodo de servicio registrado correctamente",
             sendSuccess: "Transacción enviada correctamente",
             signatureCopied: "Signature copied to clipboard",
             stakeSuccess: "Participación retenida correctamente",
@@ -281,7 +281,7 @@ export default {
             enterTransactionProof: "Enter transaction proof",
             enterWalletName: "Introduzca un nombre para el monedero",
             errorSavingItem: "Error al guardar {item}",
-            failedFrameNodeUnlock: "La liberación del nodo de servicio ha fallado",
+            failedFramePixUnlock: "La liberación del nodo de servicio ha fallado",
             failedToSetLanguage: "Fallo al cambiar de idioma: {lang}",
             failedWalletImport: "Fallo al importar el monedero",
             failedWalletOpen: "Fallo al abrir el monedero. Inténtelo de nuevo.",
@@ -296,8 +296,8 @@ export default {
             invalidRestoreDate: "Fecha de restauración no válida",
             invalidRestoreHeight: "Altura de bloque no válida",
             invalidSeedLength: "Cantidad de palabras en la semilla incorrecta",
-            invalidFrameNodeCommand: "Por favor, introduzca el comando para registrar el nodo de servicio",
-            invalidFrameNodeKey: "Clave de nodo de servicio no válida",
+            invalidFramePixCommand: "Por favor, introduzca el comando para registrar el nodo de servicio",
+            invalidFramePixKey: "Clave de nodo de servicio no válida",
             invalidWalletPath: "Ruta del monedero no válida",
             keyImages: {
                 exporting: "Error exportando imágenes de clave",
@@ -412,7 +412,7 @@ export default {
         saveToAddressBook: "Guardar en la libreta de direcciones",
         seedWords: "Palabras semilla",
         selectLanguage: "Escoja un idioma",
-        frameNodeRegistrationDescription: "Introduzca la orden {registerCommand} generada por el servicio (guusd) que se está intentado registrar como Nodo de Servicio usando la instrucción \"{prepareCommand}\"",
+        framePixRegistrationDescription: "Introduzca la orden {registerCommand} generada por el servicio (guusd) que se está intentado registrar como Nodo de Servicio usando la instrucción \"{prepareCommand}\"",
         spendKey: "Clave de gasto",
         startingDaemon: "Iniciando servicio",
         startingWallet: "Iniciando monedero",
@@ -437,7 +437,7 @@ export default {
                 pendingIncoming: "Recibida pendiente",
                 pendingOutgoing: "Emitida pendiente",
                 miner: "Minería",
-                frameNode: "Nodo de Servicio",
+                framePix: "Nodo de Servicio",
                 governance: "Gobernanza",
                 stake: "Retención participación",
                 failed: "Fallida"
@@ -461,7 +461,7 @@ export default {
         currentlyStakedNodes: "Currently staked nodes",
         privateKeys: "Claves privadas",
         rescanWallet: "Volver a examinar monedero",
-        frameNode: {
+        framePix: {
             registration: "REGISTRO",
             staking: "PARTICIPACIÓN"
         },

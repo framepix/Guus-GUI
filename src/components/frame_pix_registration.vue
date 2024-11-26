@@ -1,11 +1,11 @@
 <template>
-<div class="frame-node-registration">
+<div class="frame-pix-registration">
     <div class="q-pa-md">
-        <i18n path="strings.frameNodeRegistrationDescription" tag="div" class="description q-mb-lg">
+        <i18n path="strings.framePixRegistrationDescription" tag="div" class="description q-mb-lg">
             <b place="registerCommand">register_frame_pix</b>
             <b place="prepareCommand">prepare_registration</b>
         </i18n>
-        <GuusField :label="$t('fieldLabels.frameNodeCommand')" :error="$v.registration_string.$error" :disabled="registration_status.sending">
+        <GuusField :label="$t('fieldLabels.framePixCommand')" :error="$v.registration_string.$error" :disabled="registration_status.sending">
             <q-input
                 v-model="registration_string"
                 type="textarea"
@@ -17,7 +17,7 @@
             />
         </GuusField>
         <q-field class="q-pt-sm">
-            <q-btn color="primary" @click="register()" :label="$t('buttons.registerFrameNode')" :disabled="registration_status.sending"/>
+            <q-btn color="primary" @click="register()" :label="$t('buttons.registerFramePix')" :disabled="registration_status.sending"/>
         </q-field>
     </div>
 
@@ -35,7 +35,7 @@ import GuusField from "components/guus_field"
 import WalletPassword from "src/mixins/wallet_password"
 
 export default {
-    name: "FrameNodeRegistration",
+    name: "FramePixRegistration",
     computed: mapState({
         theme: state => state.gateway.app.config.appearance.theme,
         registration_status: state => state.gateway.frame_pix_status.registration,
@@ -82,16 +82,16 @@ export default {
                 this.$q.notify({
                     type: "negative",
                     timeout: 1000,
-                    message: this.$t("notification.errors.invalidFrameNodeCommand")
+                    message: this.$t("notification.errors.invalidFramePixCommand")
                 })
                 return
             }
 
             this.showPasswordConfirmation({
-                title: this.$t("dialog.registerFrameNode.title"),
-                noPasswordMessage: this.$t("dialog.registerFrameNode.message"),
+                title: this.$t("dialog.registerFramePix.title"),
+                noPasswordMessage: this.$t("dialog.registerFramePix.message"),
                 ok: {
-                    label: this.$t("dialog.registerFrameNode.ok")
+                    label: this.$t("dialog.registerFramePix.ok")
                 },
             }).then(password => {
                 this.$store.commit("gateway/set_snode_status", {

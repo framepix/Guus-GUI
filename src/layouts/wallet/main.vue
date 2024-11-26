@@ -40,10 +40,10 @@
                         align="left"
                     />
                 </router-link>
-                <router-link to="/wallet/framenode">
+                <router-link to="/wallet/framepix">
                     <q-btn
                         class="large-btn"
-                        :label="$t('buttons.frameNode')"
+                        :label="$t('buttons.framePix')"
                         size="md"
                         icon-right="router"
                         align="left"

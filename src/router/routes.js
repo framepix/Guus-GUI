@@ -107,9 +107,9 @@ export default [
                     import("pages/wallet/addressbook")
             },
             {
-                path: "framenode",
+                path: "framepix",
                 component: () =>
-                    import("pages/wallet/frame-node")
+                    import("pages/wallet/frame-pix")
             },
             {
                 path: "advanced",

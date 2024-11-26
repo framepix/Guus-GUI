@@ -1,7 +1,7 @@
 <template>
-<div class="frame-node-staking">
+<div class="frame-pix-staking">
     <div class="q-px-md q-pt-md">
-        <GuusField :label="$t('fieldLabels.frameNodeKey')" :error="$v.frame_pix.key.$error">
+        <GuusField :label="$t('fieldLabels.framePixKey')" :error="$v.frame_pix.key.$error">
             <q-input v-model="frame_pix.key"
                 :dark="theme=='dark'"
                 @blur="$v.frame_pix.key.$touch"
@@ -38,7 +38,7 @@
 
     </div>
 
-    <FrameNodeUnlock />
+    <FramePixUnlock />
 
     <q-inner-loading :visible="stake_status.sending || tx_status.sending" :dark="theme=='dark'">
         <q-spinner color="primary" :size="30" />
@@ -55,10 +55,10 @@ import { i18n } from "plugins/i18n"
 import { payment_id, frame_pix_key, greater_than_zero, address } from "src/validators/common"
 import GuusField from "components/guus_field"
 import WalletPassword from "src/mixins/wallet_password"
-import FrameNodeUnlock from "components/frame_pix_unlock"
+import FramePixUnlock from "components/frame_pix_unlock"
 
 export default {
-    name: "FrameNodeStaking",
+    name: "FramePixStaking",
     computed: mapState({
         theme: state => state.gateway.app.config.appearance.theme,
         unlocked_balance: state => state.gateway.wallet.info.unlocked_balance,
@@ -197,7 +197,7 @@ export default {
                 this.$q.notify({
                     type: "negative",
                     timeout: 1000,
-                    message: this.$t("notification.errors.invalidFrameNodeKey")
+                    message: this.$t("notification.errors.invalidFramePixKey")
                 })
                 return
             }
@@ -259,13 +259,13 @@ export default {
     mixins: [WalletPassword],
     components: {
         GuusField,
-        FrameNodeUnlock
+        FramePixUnlock
     }
 }
 </script>
 
 <style lang="scss">
-.frame-node-staking {
+.frame-pix-staking {
     .buttons {
         .q-btn:not(:first-child) {
             margin-left: 8px;

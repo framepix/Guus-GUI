@@ -315,11 +315,11 @@ export class Daemon {
         }, 30 * 1000) // 30 seconds
         this.heartbeatSlowAction()
 
-        clearInterval(this.frameNodeHeartbeat)
-        this.frameNodeHeartbeat = setInterval(() => {
-            this.updateFrameNodes()
+        clearInterval(this.framePixHeartbeat)
+        this.framePixHeartbeat = setInterval(() => {
+            this.updateFramePixs()
         }, 5 * 60 * 1000) // 5 minutes
-        this.updateFrameNodes()
+        this.updateFramePixs()
     }
 
     heartbeatAction () {
@@ -382,8 +382,8 @@ export class Daemon {
         })
     }
 
-    updateFrameNodes () {
-        // Get the latest frame node data
+    updateFramePixs () {
+        // Get the latest frame data
         this.getRPC("frame_pixs").then(data => {
             if (!data.hasOwnProperty("result")) return
 

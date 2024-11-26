@@ -772,7 +772,7 @@ export class WalletRPC {
                 }
 
                 // Update the new snode list
-                this.backend.daemon.updateFrameNodes()
+                this.backend.daemon.updateFramePixs()
 
                 this.sendGateway("set_snode_status", {
                     stake: {
@@ -825,12 +825,12 @@ export class WalletRPC {
                 }
 
                 // Update the new snode list
-                this.backend.daemon.updateFrameNodes()
+                this.backend.daemon.updateFramePixs()
 
                 this.sendGateway("set_snode_status", {
                     registration: {
                         code: 0,
-                        i18n: "notification.positive.registerFrameNodeSuccess",
+                        i18n: "notification.positive.registerFramePixSuccess",
                         sending: false
                     }
                 })
@@ -873,7 +873,7 @@ export class WalletRPC {
                     }
 
                     if (!data.hasOwnProperty("result")) {
-                        sendError("notification.errors.failedFrameNodeUnlock")
+                        sendError("notification.errors.failedFramePixUnlock")
                         return null
                     }
 
@@ -893,7 +893,7 @@ export class WalletRPC {
 
                     // Update the new snode list
                     if (data.unlocked) {
-                        this.backend.daemon.updateFrameNodes()
+                        this.backend.daemon.updateFramePixs()
                     }
 
                     this.sendGateway("set_snode_status", { unlock })

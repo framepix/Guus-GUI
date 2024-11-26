@@ -23,7 +23,7 @@ export default {
         next: "WEITER",
         openWallet: "WALLET ÖFFNEN",
         receive: "EMPFANGEN",
-        registerFrameNode: "FRAME NODE REGISTRIEREN",
+        registerFramePix: "FRAME REGISTRIEREN",
         rescan: "ERNEUT SCANNEN",
         restoreWallet: "WALLET WIEDERHERSTELLEN",
         save: "SPEICHERN",
@@ -32,7 +32,7 @@ export default {
         selectWalletFile: "WALLET DATEU AUSWÄHLEN",
         send: "SENDEN",
         sendCoins: "COINS SENDEN",
-        frameNode: "FRAME NODE",
+        framePix: "FRAME",
         settings: "EINSTELLUNGEN",
         showQRCode: "QR CODE ANZEIGEN",
         showTxDetails: "TX DETAILS ANZEIGEN",
@@ -92,9 +92,9 @@ export default {
             title: "Passwort",
             message: "Wallet Passwort eingeben um fortzufahren"
         },
-        registerFrameNode: {
-            title: "Frame Node registrieren",
-            message: "Möchtest du einen Frame Node registrieren?",
+        registerFramePix: {
+            title: "Frame registrieren",
+            message: "Möchtest du einen Frame registrieren?",
             ok: "REGISTRIEREN "
         },
         rescan: {
@@ -145,14 +145,14 @@ export default {
             title: "Unlock bestätigen",
             ok: "UNLOCK"
         },
-        unlockFrameNode: {
-            title: "Unlock Frame Node",
+        unlockFramePix: {
+            title: "Unlock Frame",
             confirmTitle: "Unlock bestätigen",
-            message: "Möchtest du den Frame Node „unlocken“?",
+            message: "Möchtest du den Frame „unlocken“?",
             ok: "UNLOCK"
         },
-        unlockFrameNodeWarning: {
-            title: "Unlock frame node warning",
+        unlockFramePixWarning: {
+            title: "Unlock frame warning",
             message: "Unlocking a partial stake in a node will also unstake for any other participants, if staking in a shared node its best to let the operator and other participants know you are unstaking.",
             ok: "CONTINUE"
         }
@@ -196,8 +196,8 @@ export default {
         restoreFromBlockHeight: "WIEDERHERSTELLUNG VON BLOCKHÖHE",
         restoreFromDate: "WIEDERHERSTELLUNG VON DATUM",
         seedLanguage: "SEED SPRACHE",
-        frameNodeCommand: "FRAME NODE COMMAND",
-        frameNodeKey: "FRAME NODE KEY",
+        framePixCommand: "FRAME COMMAND",
+        framePixKey: "FRAME KEY",
         signature: "SIGNATURE",
         transactionId: "TRANSACTION ID",
         walletFile: "WALLET FILE",
@@ -228,7 +228,7 @@ export default {
         copyQR: "QR Code kopieren",
         copySeedWords: "Seed Wörter kopieren",
         copySpendKey: "Spend Key kopieren",
-        copyFrameNodeKey: "Copy frame node key",
+        copyFramePixKey: "Copy frame key",
         copyTransactionId: "Transaktions ID kopieren",
         copyViewKey: "View Key kopieren",
         createNewWallet: "Neue Wallet erstellen",
@@ -261,7 +261,7 @@ export default {
             },
             passwordUpdated: "Passwort aktualisiert",
             qrCopied: "QR Code in die Zwischenablage kopiert",
-            registerFrameNodeSuccess: "Frame Node erfolgreich registriert ",
+            registerFramePixSuccess: "Frame erfolgreich registriert ",
             sendSuccess: "Transaktion erfolgreich gesendet",
             signatureCopied: "Signature copied to clipboard",
             stakeSuccess: "Staking erfolgreich",
@@ -280,7 +280,7 @@ export default {
             enterTransactionProof: "Enter transaction proof",
             enterWalletName: "Wallet Namen eingeben",
             errorSavingItem: "Fehler beim Speichern {item}",
-            failedFrameNodeUnlock: "Fehler beim Frame Node unlock",
+            failedFramePixUnlock: "Fehler beim Frame unlock",
             failedToSetLanguage: "Fehler bei der Auswahl der Sprache: {lang}",
             failedWalletImport: "Fehler beim Importieren der Wallet",
             failedWalletOpen: "Fehler beim Öffnen der Wallet. Bitte versuche es erneut",
@@ -295,8 +295,8 @@ export default {
             invalidRestoreDate: "Ungültiges Wiederherstellungsdatum",
             invalidRestoreHeight: "Ungültige Wiederherstellungshöhe",
             invalidSeedLength: "Ungültige Seed Wortlänge",
-            invalidFrameNodeCommand: "Bitte füge den Frame Node Registrierungsbefehl ein",
-            invalidFrameNodeKey: "Frame Node Key nicht gültig",
+            invalidFramePixCommand: "Bitte füge den Frame Registrierungsbefehl ein",
+            invalidFramePixKey: "Frame Key nicht gültig",
             invalidWalletPath: "Ungültiger Wallet Pfad",
             keyImages: {
                 exporting: "Fehler beim Export der Key images",
@@ -411,7 +411,7 @@ export default {
         saveToAddressBook: "In Adressbuch speichern",
         seedWords: "Seed Wörter",
         selectLanguage: "Sprache auswählen",
-        frameNodeRegistrationDescription: "Hier den {registerComand} Befehl, der mit Hilfe des Daemons durch das Kommando {prepareCommand} erzeugt wurde, eingeben, um eine Frame Node zu aktivieren",
+        framePixRegistrationDescription: "Hier den {registerComand} Befehl, der mit Hilfe des Daemons durch das Kommando {prepareCommand} erzeugt wurde, eingeben, um eine Frame zu aktivieren",
         spendKey: "Spend key",
         startingDaemon: "Daemon wird gestartet",
         startingWallet: "Wallet wird gestartet",
@@ -436,7 +436,7 @@ export default {
                 pendingIncoming: "Ausstehend eingehend",
                 pendingOutgoing: "Ausstehend ausgehend",
                 miner: "Miner",
-                frameNode: "Frame Node",
+                framePix: "Frame",
                 governance: "Governance",
                 stake: "Stake",
                 failed: "Fehlgeschlagen"
@@ -460,7 +460,7 @@ export default {
         currentlyStakedNodes: "Currently staked nodes",
         privateKeys: "Private Keys",
         rescanWallet: "Wallet erneut scannen",
-        frameNode: {
+        framePix: {
             registration: "REGISTRIERUNG",
             staking: "STAKING"
         },

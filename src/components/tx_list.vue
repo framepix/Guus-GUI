@@ -174,7 +174,7 @@ export default {
                 case "miner":
                     return i18n.t("strings.transactions.types.miner")
                 case "snode":
-                    return i18n.t("strings.transactions.types.frameNode")
+                    return i18n.t("strings.transactions.types.framePix")
                 case "gov":
                     return i18n.t("strings.transactions.types.governance")
                 case "stake":

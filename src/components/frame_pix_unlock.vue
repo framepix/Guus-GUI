@@ -1,8 +1,8 @@
 <template>
-<div class="frame-node-unlock" v-if="frame_pixs.length > 0">
+<div class="frame-pix-unlock" v-if="frame_pixs.length > 0">
     <div class="q-pa-md">
         <div class="q-pb-sm header">{{ $t('titles.currentlyStakedNodes') }}</div>
-        <q-list class="frame-node-list" no-border>
+        <q-list class="frame-pix-list" no-border>
             <q-item v-for="node in frame_pixs" :key="node.key">
                 <q-item-main>
                     <q-item-tile class="ellipsis" label>{{ node.key }}</q-item-tile>
@@ -20,7 +20,7 @@
                  <q-context-menu>
                     <q-list link separator style="min-width: 150px; max-height: 300px;">
                         <q-item v-close-overlay @click.native="copyKey(node.key, $event)">
-                            <q-item-main :label="$t('menuItems.copyFrameNodeKey')" />
+                            <q-item-main :label="$t('menuItems.copyFramePixKey')" />
                         </q-item>
                         <q-item v-close-overlay @click.native="openExplorer(node.key)">
                             <q-item-main :label="$t('menuItems.viewOnExplorer')" />
@@ -47,7 +47,7 @@ import WalletPassword from "src/mixins/wallet_password"
 import FormatGuus from "components/format_guus"
 
 export default {
-    name: "FrameNodeUnlock",
+    name: "FramePixUnlock",
     computed: mapState({
         theme: state => state.gateway.app.config.appearance.theme,
         unlock_status: state => state.gateway.frame_pix_status.unlock,
@@ -93,10 +93,10 @@ export default {
                     case 1:
                         // Tell the user to confirm
                          this.$q.dialog({
-                            title: this.$t("dialog.unlockFrameNode.confirmTitle"),
+                            title: this.$t("dialog.unlockFramePix.confirmTitle"),
                             message: this.unlock_status.message,
                             ok: {
-                                label: this.$t("dialog.unlockFrameNode.ok")
+                                label: this.$t("dialog.unlockFramePix.ok")
                             },
                             cancel: {
                                 flat: true,
@@ -127,10 +127,10 @@ export default {
     methods: {
         unlockWarning (key) {
             this.$q.dialog({
-                title: this.$t("dialog.unlockFrameNodeWarning.title"),
-                message: this.$t("dialog.unlockFrameNodeWarning.message"),
+                title: this.$t("dialog.unlockFramePixWarning.title"),
+                message: this.$t("dialog.unlockFramePixWarning.message"),
                 ok: {
-                    label: this.$t("dialog.unlockFrameNodeWarning.ok")
+                    label: this.$t("dialog.unlockFramePixWarning.ok")
                 },
                 cancel: {
                     flat: true,
@@ -146,10 +146,10 @@ export default {
             this.key = key
 
             this.showPasswordConfirmation({
-                title: this.$t("dialog.unlockFrameNode.title"),
-                noPasswordMessage: this.$t("dialog.unlockFrameNode.message"),
+                title: this.$t("dialog.unlockFramePix.title"),
+                noPasswordMessage: this.$t("dialog.unlockFramePix.message"),
                 ok: {
-                    label: this.$t("dialog.unlockFrameNode.ok")
+                    label: this.$t("dialog.unlockFramePix.ok")
                 },
             }).then(password => {
                 this.password = password
@@ -200,7 +200,7 @@ export default {
 </script>
 
 <style lang="scss">
-.frame-node-unlock {
+.frame-pix-unlock {
     user-select: none;
     .header {
         font-weight: 450;

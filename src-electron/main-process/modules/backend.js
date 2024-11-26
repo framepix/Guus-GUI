@@ -25,11 +25,11 @@ export class Backend {
 
     init (config) {
         if (os.platform() === "win32") {
-            this.config_dir = "C:\\ProgramData\\guus"
-            this.wallet_dir = `${os.homedir()}\\Documents\\Guus`
+            this.config_dir = "C:\\ProgramData\\Bitguus"
+            this.wallet_dir = `${os.homedir()}\\Documents\\BITguus`
         } else {
-            this.config_dir = path.join(os.homedir(), ".guus")
-            this.wallet_dir = path.join(os.homedir(), "Guus")
+            this.config_dir = path.join(os.homedir(), ".Bitguus")
+            this.wallet_dir = path.join(os.homedir(), "BITguus")
         }
 
         if (!fs.existsSync(this.config_dir)) {
